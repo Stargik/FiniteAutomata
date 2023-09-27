@@ -118,14 +118,13 @@ int main(int argc, const char * argv[]) {
     printf("%d\n", (automata->transitionsCount));
     
     
-    char w[WORD_MAX_SIZE + strlen(W1) + strlen(W2)];
+    char w[WORD_MAX_SIZE + strlen(W1) + strlen(W2)] = "";
     char w0[WORD_MAX_SIZE] = "";
     scanf("%s", w0);
     strcat(w, W1);
     strcat(w, w0);
     strcat(w, W2);
     printf("%s\n", w);
-    
     if(runAutomata(automata, w)){
         printf("%s", "Yes\n");
     }else{
