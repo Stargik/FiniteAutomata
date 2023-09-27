@@ -14,8 +14,8 @@
             filePath = "FiniteAutomata/main.c"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "128"
-            endingLineNumber = "128"
+            startingLineNumber = "121"
+            endingLineNumber = "121"
             landmarkName = "main(argc, argv)"
             landmarkType = "9">
             <Locations>
@@ -122,8 +122,8 @@
             filePath = "FiniteAutomata/main.c"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "63"
-            endingLineNumber = "63"
+            startingLineNumber = "56"
+            endingLineNumber = "56"
             landmarkName = "runAutomata(automata, word)"
             landmarkType = "9">
          </BreakpointContent>

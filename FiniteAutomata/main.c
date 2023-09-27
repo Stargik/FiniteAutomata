@@ -1,10 +1,3 @@
-//
-//  main.c
-//  FiniteAutomata
-//
-//  Created by Aleksandr Starzhynskyi on 27.09.2023.
-//
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -105,7 +98,7 @@ int runAutomata(struct Automata *automata, char* word){
 }
 
 int main(int argc, const char * argv[]) {
-    char * filename = "input.txt";
+    char * filename = DEFAULT_INPUT_FILE_NAME;
     FILE *fp = fopen(filename, "r");
 
     struct Automata *automata = malloc(sizeof(struct Automata));
