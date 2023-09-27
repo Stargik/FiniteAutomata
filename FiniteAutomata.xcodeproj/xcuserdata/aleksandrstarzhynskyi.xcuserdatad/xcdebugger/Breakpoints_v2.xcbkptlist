@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "D44B8607-B52E-4D26-B1A3-A603AF46131B"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "C7398881-0D64-44D0-A0B7-095A20EDC1EA"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "FiniteAutomata/main.c"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "128"
+            endingLineNumber = "128"
+            landmarkName = "main(argc, argv)"
+            landmarkType = "9">
+            <Locations>
+               <Location
+                  uuid = "C7398881-0D64-44D0-A0B7-095A20EDC1EA - f5e0cae1523edb29"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "main"
+                  moduleName = "FiniteAutomata"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/aleksandrstarzhynskyi/Repositories/Git/GitHub/FiniteAutomata/FiniteAutomata/main.c"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "111"
+                  endingLineNumber = "111"
+                  offsetFromSymbolStart = "92">
+               </Location>
+               <Location
+                  uuid = "C7398881-0D64-44D0-A0B7-095A20EDC1EA - f5e0cae1523edb4a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "main"
+                  moduleName = "FiniteAutomata"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/aleksandrstarzhynskyi/Repositories/Git/GitHub/FiniteAutomata/FiniteAutomata/main.c"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "112"
+                  endingLineNumber = "112"
+                  offsetFromSymbolStart = "104">
+               </Location>
+               <Location
+                  uuid = "C7398881-0D64-44D0-A0B7-095A20EDC1EA - f5e0cae1523ed917"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "main"
+                  moduleName = "FiniteAutomata"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/aleksandrstarzhynskyi/Repositories/Git/GitHub/FiniteAutomata/FiniteAutomata/main.c"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "125"
+                  endingLineNumber = "125"
+                  offsetFromSymbolStart = "520">
+               </Location>
+               <Location
+                  uuid = "C7398881-0D64-44D0-A0B7-095A20EDC1EA - f5e0cae1523ed938"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "main"
+                  moduleName = "FiniteAutomata"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/aleksandrstarzhynskyi/Repositories/Git/GitHub/FiniteAutomata/FiniteAutomata/main.c"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "126"
+                  endingLineNumber = "126"
+                  offsetFromSymbolStart = "520">
+               </Location>
+               <Location
+                  uuid = "C7398881-0D64-44D0-A0B7-095A20EDC1EA - f5e0cae1523ed959"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "main"
+                  moduleName = "FiniteAutomata"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/aleksandrstarzhynskyi/Repositories/Git/GitHub/FiniteAutomata/FiniteAutomata/main.c"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "127"
+                  endingLineNumber = "127"
+                  offsetFromSymbolStart = "532">
+               </Location>
+               <Location
+                  uuid = "C7398881-0D64-44D0-A0B7-095A20EDC1EA - f5e0cae1523ed97a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "main"
+                  moduleName = "FiniteAutomata"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/aleksandrstarzhynskyi/Repositories/Git/GitHub/FiniteAutomata/FiniteAutomata/main.c"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "128"
+                  endingLineNumber = "128"
+                  offsetFromSymbolStart = "532">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "C6BC7A40-F0C1-46EE-A26A-D4C2CDB063D4"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "FiniteAutomata/main.c"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "63"
+            endingLineNumber = "63"
+            landmarkName = "runAutomata(automata, word)"
+            landmarkType = "9">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
