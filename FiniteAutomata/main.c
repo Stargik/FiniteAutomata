@@ -13,7 +13,7 @@
 #define DEFAULT_OUTPUT_FILE_NAME "output.txt"
 #define DEFAULT_TRANSITION_COUNT 100
 #define W1 "ab"
-#define W2 "ab"
+#define W2 "cabb"
 #define WORD_MAX_SIZE 30
 
 struct Transition
