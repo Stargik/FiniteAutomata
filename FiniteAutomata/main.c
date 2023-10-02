@@ -55,7 +55,13 @@ void readFromFile(FILE *fp, struct Automata *automata){
 int runAutomata(struct Automata *automata, char* word, int productiveStates[DEFAULT_TRANSITION_COUNT]){
     int index = 0;
     int isTransitionExist = 0;
-    
+    if(!strcmp(word, "")){
+        int isFinalState = 0;
+        if (productiveStates[automata->startState]){
+            isFinalState = 1;
+        }
+        return isFinalState;
+    }
     struct Transition *transition = malloc(sizeof(struct Transition));
     for (int i = 0; i < automata->transitionsCount; i++) {
         if (automata->startState == automata->transitions[i].currentState && automata->transitions[i].symbol == word[index]){
@@ -89,11 +95,8 @@ int runAutomata(struct Automata *automata, char* word, int productiveStates[DEFA
     }
     
     int isFinalState = 0;
-    for (int i = 0; i < automata->finalStatesCount; i++) {
-        if (productiveStates[transition->resultState]){
-            isFinalState = 1;
-            break;
-        }
+    if (productiveStates[transition->resultState]){
+        isFinalState = 1;
     }
     return isFinalState;
 }
@@ -176,8 +179,8 @@ int main(int argc, const char * argv[]) {
             }
         }
     }
+    printf("%s", "----------------\n");
     if(res){
-        printf("%s", "----------------\n");
         printf("%s", "Yes\n");
     }else{
         printf("%s", "No\n");
