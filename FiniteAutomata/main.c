@@ -2,11 +2,12 @@
 #include <stdlib.h>
 #include <string.h>
 
+
 #define DEFAULT_INPUT_FILE_NAME "input.txt"
 #define DEFAULT_OUTPUT_FILE_NAME "output.txt"
 #define DEFAULT_TRANSITION_COUNT 100
-#define W1 "ab"
-#define W2 "cabb"
+#define W1 "a"
+#define W2 "b"
 #define WORD_MAX_SIZE 30
 
 struct Transition
@@ -51,7 +52,7 @@ void readFromFile(FILE *fp, struct Automata *automata){
     automata->transitionsCount = transitionsCount;
 }
 
-int runAutomata(struct Automata *automata, char* word){
+int runAutomata(struct Automata *automata, char* word, int productiveStates[DEFAULT_TRANSITION_COUNT]){
     int index = 0;
     int isTransitionExist = 0;
     
@@ -89,12 +90,51 @@ int runAutomata(struct Automata *automata, char* word){
     
     int isFinalState = 0;
     for (int i = 0; i < automata->finalStatesCount; i++) {
-        if (transition->resultState == automata->finalStates[i]){
+        if (productiveStates[transition->resultState]){
             isFinalState = 1;
             break;
         }
     }
     return isFinalState;
+}
+
+void findReachableStates(int statesCount, int transitionsCount, struct Transition transitions[], int startState, int reachableStates[DEFAULT_TRANSITION_COUNT]) {
+    int queue[DEFAULT_TRANSITION_COUNT];
+    int front = 0, back = 0;
+    queue[back++] = startState;
+    reachableStates[startState] = 1;
+    while (front < back) {
+        int currentCtate = queue[front++];
+
+        for (int i = 0; i < transitionsCount; i++) {
+            if (transitions[i].currentState == currentCtate && !reachableStates[transitions[i].resultState]) {
+                reachableStates[transitions[i].resultState] = 1;
+                queue[back++] = transitions[i].resultState;
+            }
+        }
+    }
+}
+
+void findProductiveStates(int statesCount, int transitionsCount, struct Transition transitions[], int finalStates[], int finalStatesCount, int productiveStates[DEFAULT_TRANSITION_COUNT]) {
+    
+    for (int i = 0; i < finalStatesCount; i++) {
+        productiveStates[finalStates[i]] = 1;
+    }
+    
+    int isUpdated = 1;
+    while (isUpdated) {
+        isUpdated = 0;
+        
+        for (int i = 0; i < transitionsCount; i++) {
+            int currentState = transitions[i].currentState;
+            int resultState = transitions[i].resultState;
+            
+            if (productiveStates[resultState] && !productiveStates[currentState]) {
+                productiveStates[currentState] = 1;
+                isUpdated = 1;
+            }
+        }
+    }
 }
 
 int main(int argc, const char * argv[]) {
@@ -116,18 +156,32 @@ int main(int argc, const char * argv[]) {
         printf("%d %s %d\n", (automata->transitions[i].currentState), &(automata->transitions[i].symbol), (automata->transitions[i].resultState));
     }
     printf("%d\n", (automata->transitionsCount));
+    int reachableStates[DEFAULT_TRANSITION_COUNT] = {0};
+    findReachableStates(automata->statesCount, automata->transitionsCount, automata->transitions, automata->startState, reachableStates);
+    int productiveStates[DEFAULT_TRANSITION_COUNT] = {0};
+    findProductiveStates(automata->statesCount, automata->transitionsCount, automata->transitions, automata->finalStates, automata->finalStatesCount, productiveStates);
     
     
-    char w[WORD_MAX_SIZE + strlen(W1) + strlen(W2)] = "";
-    char w0[WORD_MAX_SIZE] = "";
-    scanf("%s", w0);
-    strcat(w, W1);
-    strcat(w, w0);
-    strcat(w, W2);
+    
+    char w[WORD_MAX_SIZE] = "";
+    scanf("%s", w);
     printf("%s\n", w);
-    if(runAutomata(automata, w)){
+    int res = 0;
+    for (int i = 0; i < automata->statesCount; i++) {
+        if(reachableStates[i]){
+            automata->startState = i;
+            if(runAutomata(automata, w, productiveStates)){
+                res = 1;
+                break;
+            }
+        }
+    }
+    if(res){
+        printf("%s", "----------------\n");
         printf("%s", "Yes\n");
     }else{
         printf("%s", "No\n");
     }
+    
+
 }
